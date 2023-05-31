@@ -1,0 +1,25 @@
+unsigned const LED = 8;
+unsigned const BUTTON = 7;
+unsigned int button_State = 0;
+void setup()
+{
+  pinMode(BUTTON, OUTPUT);
+  pinMode(LED, OUTPUT);
+}
+
+void loop()
+{
+  if(digitalRead(BUTTON)==1)
+  {   
+   digitalWrite(LED, HIGH);
+    button_State +=1 ;
+    if(button_State % 2 == 0)
+    {
+   
+     digitalWrite(LED, LOW);
+     button_State = 0 ;
+    }
+    delay(100);
+  }
+   
+}
