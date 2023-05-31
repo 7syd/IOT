@@ -1,11 +1,11 @@
 unsigned const LED = 8;
-unsigned const BUTTOn = 7;
+unsigned const BUTTON = 7;
 unsigned int button_state =  0;
 
 void setup()
 {
-  pinmode(BUTTON, INPUT);
-  pinmode(LED,OUTPUT);
+  pinMode(BUTTON,INPUT);
+  pinMode(LED,OUTPUT);
 }
 
 void loop () 
